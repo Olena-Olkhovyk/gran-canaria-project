@@ -79,5 +79,5 @@ body.light-theme {
     --secondary-background-color: #f1f1f1;
     --hover-light-color: #fff;
     --transparent-light-color: #252830;
-    --transparent-dark-color: rgba(0,0,0,.75);
+    --transparent-dark-color: rgba(0,0,0,.1);
 }
