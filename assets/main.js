@@ -17,3 +17,12 @@ const scrollHeader = () => {
 }
 
 window.addEventListener('scroll', scrollHeader);
+
+//open menu & toggle icon
+const menuToggleIcon = selectElement('#menu-toggle-icon');
+const toggleMenu = () => {
+    const mobilMenu = selectElement('#menu');
+    mobilMenu.classList.toggle('activated');
+    menuToggleIcon.classList.toggle('activated');
+}
+window.addEventListener('click', toggleMenu);
