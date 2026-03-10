@@ -81,3 +81,16 @@ body.light-theme {
     --transparent-light-color: #252830;
     --transparent-dark-color: rgba(0,0,0,.1);
 }
+
+/* reusable classes */
+.container {
+    max-width: 160 rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.place-items-center {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
