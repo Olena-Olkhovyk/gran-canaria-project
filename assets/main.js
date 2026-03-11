@@ -46,3 +46,15 @@ themeToggleBtn.addEventListener('click', () => {
         localStorage.removeItem('currentTheme');
     }
 })
+
+//open and close search form
+const formOpenBtn = selectElement('#search-icon');
+const searchFormContainer = selectElement('#search-form-container');
+const closeBtn = selectElement('#form-close-btn');
+
+formOpenBtn.addEventListener('click', () => searchFormContainer.classList.add('activated'));
+closeBtn.addEventListener('click', () =>  searchFormContainer.classList.remove('activated'));
+
+window.addEventListener('keyup', event => {
+    if(event.key === 'Escape') searchFormContainer.classList.remove('activated');
+});
