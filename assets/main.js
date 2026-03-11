@@ -25,4 +25,13 @@ const toggleMenu = () => {
     mobilMenu.classList.toggle('activated');
     menuToggleIcon.classList.toggle('activated');
 }
-window.addEventListener('click', toggleMenu);
+menuToggleIcon.addEventListener('click', toggleMenu);
+
+// switch theme and add to local storage
+
+const bodyElement = document.body;
+const themeToggleBtn = selectElement('#theme-toggle-btn');
+
+themeToggleBtn.addEventListener('click', () => {
+    bodyElement.classList.toggle('light-theme');
+})
