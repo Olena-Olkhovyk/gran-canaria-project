@@ -441,3 +441,13 @@ body.light-theme {
 .featured-articles-container {
     display: flex;
 }
+/* footer */
+.footer {
+    padding: 0 1.5rem;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
