@@ -86,7 +86,11 @@ body.light-theme {
 .container {
     max-width: 160rem;
     margin: 0 auto;
-    padding: 0 1.5rem; 
+    padding: 0 1.5rem;
+}
+
+.text {
+    white-space: pre-line;
 }
 
 .place-items-center {
@@ -390,6 +394,10 @@ body.light-theme {
 
 .blog-post-title {
     font-size: clamp(3rem, 5vw, 6rem);
+}
+
+.blog-post-image {
+    width: 300px;
 }
 
 .blog-post-data .article-data {
