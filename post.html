@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gran Canaria</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/main.css">
+</head>
+<body>
+       <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <a href="./index.html">
+                <h2 class="logo">Gran Canaria</h2>
+            </a>
+            <div class="menu" id="menu">
+                <ul class="list">
+                    <li class="list-item">
+                        <a href="#" class="list-link current">Home</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#" class="list-link">Categories</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#" class="list-link">Reviews</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#" class="list-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="list list-ight">
+                <button class="btn place-items-center" id="theme-toggle-btn">
+                    <i class="ri-sun-line sun-icon"></i>
+                    <i class="ri-moon-line moon-icon"></i>
+                </button>
+                 <button class="btn place-items-center" id="search-icon">
+                    <i class="ri-search-line"></i>
+                </button>
+                <button class="btn place-items-center screen-lg-hidden menu-toggle-icon" id="menu-toggle-icon">
+                    <i class="ri-menu-3-line open-menu-icon"></i>
+                     <i class="ri-close-line close-menu-icon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <!-- search -->
+    <div class="search-form-container container" id="search-form-container">
+        <div class="form-container-inner">
+            <form action="" class="form">
+                <input type="text" class="form-input" placeholder="Search">
+                <button class="btn form-btn" type="submit">
+                    <i class="ri-search-line"></i>
+                </button>
+            </form>
+            <span class="form-note">Or press ESC to close.</span>
+        </div>
+        <button class="btn form-close-btn place-items-center" id="form-close-btn">
+            <i class="ri-close-line"></i>
+        </button>
+    </div>
+    <section class="blog-post section-header-offset">
+        <div class="blog-post-container container">
+            <div class="blog-post-data">
+                <h3 class="title blog-post-title" id="title"></h3>
+                <div class="article-data">
+                    <span id="date"></span>
+                    <span class="article-data-spacer"></span>
+                    <span>4min</span>
+                </div>
+                <img src="" alt="post image" id="pic" class="blog-post-image">
+            </div>
+            <div class="container">
+                <p class="text" id="text"></p>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+     <footer class="footer section">
+        <div class="footer-container">
+             <a href="./index.html">
+                <h2 class="logo">Gran Canaria</h2>
+            </a>
+            <p>Olena Olkhovyk</p>
+        </div>
+     </footer>
+     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>  
+    <script src="./assets/main.js"></script> 
+</body>
+</html>
+<script>
+const posts = {
+    1: {
+        title: "First days...",
+        content: "We flew out on Thursday. For me, the flight wasn’t the most pleasant this time, as I had a bit of a cold and an earache during the journey. Still, the thought of soon being in Las Palmas kept my spirits high.\n As soon as we arrived and settled into the apartment, we noticed that one room was very spacious while the other was quite tiny. To make sure no one felt left out, we decided to swap rooms after a month.\n The next day, we had a meeting with our Erasmus internship coordinator, followed by a presentation about the company. The coordinator explained the apartment rules, gave us information about excursions, and covered other organizational details. After that, we went to the company. There, we met four colleagues. They were kind and friendly, so we had a short introduction and got to know each other a little. Later, Clara and I went to buy a bus travel card.\n On Saturday, we visited the carnival in Maspalomas, which is in another city. We really enjoyed it and had a great time.",
+        date: "27 March 2026",
+        pic:"./assets/images/featured/week1.jpeg"
+    },
+    2: {
+        title: "Week 2",
+        content: "",
+        date: ""
+    },
+    3: {
+        title: "Week 3",
+        content: "",
+        date: ""
+    },
+    4: {
+        title: "Week 4",
+        content: "",
+        date: ""
+    },
+    5: {
+        title: "Week 5",
+        content: "",
+        date: ""
+    },
+    6: {
+        title: "Week 6",
+        content: "",
+        date: ""
+    },
+    7: {
+        title: "Week 7",
+        content: "",
+        date: ""
+    },
+    8: {
+        title: "Week 8",
+        content: "",
+        date: ""
+    }
+};
+
+// получаем id из URL
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+// вставляем данные
+if (posts[id]) {
+    document.getElementById("title").textContent = posts[id].title;
+    document.getElementById("text").textContent = posts[id].content;
+    document.getElementById("date").textContent = posts[id].date;
+    document.getElementById("pic").src = posts[id].pic;
+} else {
+    document.getElementById("title").textContent = "Post not found ";
+}
+</script>
